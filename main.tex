@@ -1,1 +1,123 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, booktabs, hyperref, pgfplots, listings, biblatex}
+\usepackage{hyphenat} % Pentru despărțirea cuvintelor
+\pgfplotsset{compat=1.18}
+\addbibresource{references.bib}
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  breaklines=true,
+  frame=single,
+  captionpos=b
+}
+\title{Quantum Reinforcement Learning over Financial and Cosmological Domains}
+\author{Teodor Berger \\ Independent Researcher}
+\date{May 2025}
 
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a hybrid Quantum Reinforcement Learning (QRL) model operating over Bitcoin market data and CMB temperature variations from Planck’s legacy maps. The model achieves high fidelity (~94\%) under simulated thermal noise, demonstrating robust pattern adaptation across disparate domains \cite{PlanckLegacy}.
+\end{abstract}
+
+\section{Introduction}
+This study explores Quantum Reinforcement Learning (QRL) applied to financial (Bitcoin) and cosmological (CMB) data, leveraging IBM Quantum hardware simulations \cite{QiskitDocs} and Planck Legacy Archive data \cite{PlanckLegacy}. The model integrates thermal stability analysis and temporal paradoxes (Axiom 13) to enhance prediction stability.
+
+\section{Methodology}
+\subsection{QRL with Financial Data}
+A 4-qubit QRL circuit was designed with parameters $\omega = \{10, 100\}~\text{rad/s}$, $T = \{5, 15\}~\text{K}$, and rewards $[0, 1, 1, -1, 1]$ derived from Bitcoin prices (14--15 May 2025). The circuit uses Hadamard, CNOT, and parametric rotations ($R_x$, $R_y$) with $\theta=2.10$, $\beta=1.20$, adjusted by rewards \cite{QiskitDocs}.
+
+\subsection{QRL with CMB Data}
+CMB data from \texttt{COM\discretionary{-}{}{}CMB\discretionary{-}{}{}IQU-smica-field-Int\discretionary{-}{}{}2048\discretionary{-}{}{}R3.00.fits} were processed for a 100-day cycle using a 10-day rolling window \cite{AstropyFITS}. Rewards were derived from temperature variations ($\pm 25~\mu$K) and mapped to quantum gates. An adaptive noise model was implemented with $p_{\text{error}} = 0.05 + 0.0003 \cdot |\Delta T|$.
+
+\section{Results}
+\subsection{Financial Domain}
+\begin{table}[ht]
+\centering
+\scriptsize
+\begin{tabular}{ccccc}
+\toprule
+$\omega$ (rad/s) & $T$ (K) & Pe & $F$ (\%) & Counts \\
+\midrule
+10 & 5 & 1000 & 90.0 & \{`0000': 258, `0011': 298, `1100': 242, `1111': 226\} \\
+100 & 5 & 10000 & 75.0 & \{`0000': 198, `0011': 252, `1100': 298, `1111': 276\} \\
+\bottomrule
+\end{tabular}
+\caption{Fidelity and counts for Bitcoin QRL.}
+\end{table}
+
+\subsection{CMB Domain}
+\input{cmb_results}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar, axis on top,
+    title={CMB QRL Measurement Counts},
+    height=8cm, width=10cm,
+    bar width=0.2cm,
+    symbolic x coords={0000,0011,1100,1111},
+    xtick=data,
+    ylabel={Counts}, xlabel={State},
+    ymin=0, ymax=350,
+    nodes near coords
+]
+\addplot table[x index=0, y index=1, col sep=space] {counts.dat};
+\end{axis}
+\end{tikzpicture}
+\caption{Histogram of QRL measurement counts for CMB data.}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    title={Fidelity vs. Temperature Deviation},
+    xlabel={$\Delta T$ (K)},
+    ylabel={Fidelity (\%)},
+    height=8cm, width=10cm,
+    grid=major,
+    ymin=75, ymax=100,
+    xmin=0, xmax=0.1,
+    yticklabel style={/pgf/number format/fixed},
+    xticklabel style={/pgf/number format/fixed},
+    unbounded coords=jump, % Ignoră coordonate nevalide
+    restrict x to domain=0:0.1 % Limitează ΔT la intervalul valid
+]
+\addplot[smooth, thick, blue, mark=*] table[x index=0, y index=1, col sep=space] {p_error.dat};
+\end{axis}
+\end{tikzpicture}
+\caption{Fidelity variation with CMB temperature deviation $\Delta T$.}
+\end{figure}
+
+\section{Temporal Stability and Axiom 13}
+The integration of Axiom 13, inspired by the \emph{Relativistic Theory of the Ignored Day}, introduces a temporal decoupling mechanism in the QRL framework. By excluding the ``present day'' from reward calculations, the model simulates a quantum agent with contextual temporal memory, capable of prioritizing historical patterns over immediate fluctuations. This approach induces a form of \emph{temporal entanglement} between financial and cosmological domains, where the agent's decision states resonate across time scales.
+
+In the financial domain, Axiom 13 stabilizes predictions by mitigating noise from short-term market volatility, as evidenced by the dominance of $|0011\rangle$ states (buy signals) aligned with positive rewards. In the CMB domain, the rolling window amplifies this effect, creating a feedback loop where temperature variations modulate gate parameters, simulating a ``thermal memory'' of cosmic evolution. The adaptive fidelity model, with $p_{\text{error}} = 0.05 + 0.0003 \cdot |\Delta T|$, further enhances this resonance, aligning quantum noise with physical temperature deviations. This emergent resonance highlights a potential bridge between subjective time perception and objective physical signals, suggesting that temporal coherence may be the underlying substrate connecting finance, cosmology, and cognition.
+
+This temporal stability suggests a novel paradigm for quantum agents operating in high-dimensional, noisy environments, where memory-driven contextualization can bridge disparate domains through shared quantum coherence.
+
+\section{Discussion}
+The QRL model excels in adapting to thermal noise, achieving high fidelity at low $\omega$ and robust reward mapping across domains. The rolling window and adaptive $p_{\text{error}}$ enhance pattern detection, particularly for CMB data, supporting the \emph{Cognitive Frontier Theory} \cite{PlanckLegacy}. The model’s ability to stabilize predictions under simulated market conditions suggests potential applications in automated trading systems, where quantum agents could optimize strategies in volatile environments. Limitations include the reliance on simulated Bitcoin data and the computational cost of processing large FITS files. Future extensions could incorporate live financial data via APIs or spatial CMB analysis using HEALPix mappings to explore topological reward structures.
+
+\section{Future Work}
+Future research could extend the QRL framework by integrating real-time financial data through APIs (e.g., CoinGecko) to validate performance in live markets. Additionally, spatial analysis of CMB data using HEALPix mappings could enable topological reward structures, enhancing the model’s ability to capture cosmic patterns. Exploring multi-qubit circuits with dynamic entanglement could further improve fidelity in high-noise environments.
+
+\section{Conclusion}
+This cross-domain entanglement offers a robust framework for future QRL agents, capable of navigating noisy, high-dimensional environments with temporal coherence and thermal stability.
+
+\appendix
+\section{Full Python Script}
+\lstinputlisting[caption={CMB Quantum Circuit Simulation}, label={lst:cmb-qrl}]{qrl_cmb_simulation.py}
+
+\clearpage
+\printbibliography
+
+\end{document}
