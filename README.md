@@ -25,64 +25,46 @@ quantum-trading-thermal-stability/
 - **CMB Data**: Download `COM_CMB_IQU-smica-field-Int_2048_R3.00.fits` from [Planck Legacy Archive](https://pla.esac.esa.int/pla/#maps) if regenerating data files.
 '''
 
-## Setup and Compilation
+## Setup
 
-1. **Create an Overleaf Project**:
+1. **Compile in Overleaf**:
    - Log in to [Overleaf](https://www.overleaf.com).
-   - Create a new project and upload all files listed in the project structure (except the PDF).
-   - Ensure all files are encoded in UTF-8 to avoid errors.
-   - Alternatively, download the compiled PDF: [Quantum_Trading_Thermal_Stability.pdf](Quantum_Trading_Thermal_Stability.pdf).
+   - Upload all files (except PDF) to a new project.
+   - Set compiler to `pdfLaTeX` and compile `main.tex`.
+   - Check:
+     - CMB table: ~93.7% fidelity.
+     - Graphs: Histogram and fidelity vs. ΔT.
+     - PDF: Vectorial (clear at zoom in Adobe Acrobat).
+   - Download PDF as `Quantum_Trading_Thermal_Stability.pdf`.
 
-2. **Generate Data Files** (optional, if you need to regenerate):
-   - Run `qrl_cmb_simulation.py` locally to generate:
-     - `cmb_results.tex`: CMB results table.
-     - `p_error.dat`: Fidelity vs. ΔT data.
-     - `counts.dat`: QRL counts data.
-   - Requirements:
-     - Place `COM_CMB_IQU-smica-field-Int_2048_R3.00.fits` in the same directory as the script.
-     - Install dependencies: `pip install astropy qiskit pandas`.
+2. **Regenerate Data (Optional)**:
+   - Run `qrl_cmb_simulation.py` locally:
+     - Download `COM_CMB_IQU-smica-field-Int_2048_R3.00.fits` from [Planck Legacy Archive](https://pla.esac.esa.int/pla/#maps).
+     - Install: `pip install astropy qiskit pandas`.
      - Run: `python qrl_cmb_simulation.py`.
-   - Expected output:
-     - Cycle: 91 days
-     - Rewards: ~34.1% +1, ~33.0% -1, ~33.0% 0
-     - Fidelity: ~93.7%
-     - Files: `cmb_results.tex`, `p_error.dat`, `counts.dat`
+     - Outputs: `cmb_results.tex`, `p_error.dat`, `counts.dat`.
 
-3. **Compile the PDF**:
-   - In Overleaf, set the compiler to `pdfLaTeX`.
-   - Ensure all files are in the root directory and encoded in UTF-8.
-   - Compile `main.tex` to generate the PDF.
-   - Verify:
-     - CMB table shows ~93.7% fidelity.
-     - PGFPlots graphs (histogram and fidelity vs. ΔT) render correctly.
-     - Python code listing in the appendix is readable.
-     - IEEE references appear in text (e.g., [1]) and bibliography.
-     - PDF is 100% vectorial (check graphs in Adobe Acrobat at high zoom).
+3. **Troubleshooting**:
+   - **PGFPlots errors**: Ensure `p_error.dat` has 91 lines, no „...”. Regenerate if needed.
+   - **UTF-8 errors**: Save files in UTF-8 (VS Code: „Save with Encoding” → UTF-8).
+   - **Math mode errors**: FITS file name in `main.tex` uses `\discretionary{-}{}{}`.
 
-4. **Troubleshooting**:
-   - **PGFPlots errors** (e.g., „Could not parse input '...'”):
-     - Ensure `p_error.dat` has 91 lines, no invalid entries (e.g., „...”), and no empty lines.
-     - Regenerate `p_error.dat` using `qrl_cmb_simulation.py` if needed.
-     - Verify `main.tex` uses `unbounded coords=jump` and `restrict x to domain=0:0.1`.
-   - **UTF-8 errors**:
-     - Save all files (especially `qrl_cmb_simulation.py` and `p_error.dat`) in UTF-8 encoding.
-     - In editors like VS Code, select „Save with Encoding” → UTF-8.
-   - **Math mode errors**:
-     - Ensure file names with underscores (e.g., FITS file in `main.tex`) use `\discretionary{-}{}{}` for hyphenation.
-   - **Overfull \hbox warnings**:
-     - The financial table uses `\scriptsize`, and paragraphs have hyphenation enabled to minimize warnings. Minor warnings may persist but do not affect the PDF.
+## Access
 
-5. **Access the PDF**:
-   - Download the compiled PDF from Overleaf or use [Quantum_Trading_Thermal_Stability.pdf](Quantum_Trading_Thermal_Stability.pdf).
-   - Confirm the PDF is vectorial by zooming in on graphs in Adobe Acrobat.
+- GitHub: [https://github.com/DonMask/quantum-trading-thermal-stability](https://github.com/DonMask/quantum-trading-thermal-stability)
+- Zenodo: [DOI] (replace with Zenodo DOI)
 
-## Notes
+## Citation
 
-- The project uses an adaptive noise model with \( p_{\text{error}} = 0.05 + 0.0003 \cdot |\Delta T| \), achieving a fidelity of ~93.7%.
-- The PDF is 100% vectorial, using TikZ/PGFPlots for graphs and tables, with no external images.
-- The project adheres to IEEE style for citations and formatting.
-- Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
-- Repository: [https://github.com/DonMask/quantum-trading-thermal-stability](https://github.com/DonMask/quantum-trading-thermal-stability)
+```bibtex
+@misc{berger_2025_quantum_trading,
+  author       = {Teodor Berger},
+  title        = {Quantum Trading with Thermal Stability: QRL Model for Bitcoin and CMB Data},
+  year         = {2025},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.1234567}, % Replace with actual DOI
+  url          = {https://doi.org/10.5281/zenodo.1234567} % Replace with actual DOI
+}
 
 ## License
 
