@@ -50,20 +50,18 @@ quantum-trading-thermal-stability/
    - **Math mode errors**: FITS file name in `main.tex` uses `\discretionary{-}{}{}`.
 
 ## Access
-
 - GitHub: [https://github.com/DonMask/quantum-trading-thermal-stability](https://github.com/DonMask/quantum-trading-thermal-stability)
-- Zenodo: [DOI] (replace with Zenodo DOI)
+- Zenodo: https://doi.org/10.5281/zenodo.15420886
 
 ## Citation
-
 ```bibtex
 @misc{berger_2025_quantum_trading,
   author       = {Teodor Berger},
   title        = {Quantum Trading with Thermal Stability: QRL Model for Bitcoin and CMB Data},
   year         = {2025},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.1234567}, % Replace with actual DOI
-  url          = {https://doi.org/10.5281/zenodo.1234567} % Replace with actual DOI
+  doi          = {10.5281/zenodo.15420886},
+  url          = {https://doi.org/10.5281/zenodo.15420886}
 }
 ```
 ## License
