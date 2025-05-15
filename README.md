@@ -84,31 +84,6 @@ quantum-trading-thermal-stability/
 - Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 - Repository: [https://github.com/DonMask/quantum-trading-thermal-stability](https://github.com/DonMask/quantum-trading-thermal-stability)
 
-## GitHub Setup
-
-1. **Verify All Files**:
-   - Ensure the repository contains all files listed in the project structure.
-   - If any files are missing, upload them using Git or GitHub's web interface:
-     ```bash
-     git clone https://github.com/DonMask/quantum-trading-thermal-stability.git
-     cd quantum-trading-thermal-stability
-     # Copy files
-     git add .
-     git commit -m "Add all project files with fixed PGFPlots and UTF-8 issues"
-     git push origin main
-     ```
-
-2. **Create a Release**:
-   - Go to the „Releases” section on GitHub.
-   - Create a new release:
-     - Tag: `v1.0.0`
-     - Title: „Initial Release: QRL with 93.7% Fidelity”
-     - Attach `Quantum_Trading_Thermal_Stability.pdf` and a ZIP of all files.
-     - Publish the release.
-
-3. **Share on X**:
-   - Post: „Finalized QRL with adaptive fidelity (p_error = 0.05 + 0.0003·|ΔT|), achieving ~93.7% fidelity for CMB and BTC. IEEE-style PDF, 100% vectorial with TikZ. Licensed under CC BY 4.0. Check it out: https://github.com/DonMask/quantum-trading-thermal-stability #QuantumTrading #Planck”
-
 ## License
 
 This project is licensed under the Creative Commons Attribution 4.0 International License. See the [LICENSE](LICENSE) file for details.
