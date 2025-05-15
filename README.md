@@ -3,7 +3,7 @@
 This project implements a Quantum Reinforcement Learning (QRL) model integrating financial (Bitcoin) and cosmological (CMB) data, achieving high fidelity (~93.7%) under simulated thermal noise. The project is documented in a 100% vectorial PDF, generated using LaTeX and Overleaf, with no external images, adhering to IEEE style.
 
 ## Project Structure
-
+```
 quantum-trading-thermal-stability/
 ├── LICENSE                           # Creative Commons Attribution 4.0 License
 ├── Quantum_Trading_Thermal_Stability.pdf  # Compiled vectorial PDF report
@@ -14,9 +14,9 @@ quantum-trading-thermal-stability/
 ├── p_error.dat                    # Data for fidelity vs. ΔT plot
 ├── qrl_cmb_simulation.py          # Python simulation script
 └── references.bib                 # Bibliography in IEEE style
-
+```
 ## Requirements
-'''
+
 - **Overleaf Account**: For compiling the LaTeX document.
 - **Python Environment** (to regenerate data files, optional):
   - Python 3.8+
