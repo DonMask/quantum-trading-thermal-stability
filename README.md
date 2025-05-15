@@ -51,7 +51,7 @@ quantum-trading-thermal-stability/
 
 ## Access
 - GitHub: [https://github.com/DonMask/quantum-trading-thermal-stability](https://github.com/DonMask/quantum-trading-thermal-stability)
-- Zenodo: https://doi.org/10.5281/zenodo.15420886
+- Zenodo: https://doi.org/10.5281/zenodo.15424066
 
 ## Citation
 ```bibtex
@@ -60,8 +60,8 @@ quantum-trading-thermal-stability/
   title        = {Quantum Trading with Thermal Stability: QRL Model for Bitcoin and CMB Data},
   year         = {2025},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.15420886},
-  url          = {https://doi.org/10.5281/zenodo.15420886}
+  doi          = {10.5281/zenodo.15424066},
+  url          = {https://doi.org/10.5281/zenodo.15424066}
 }
 ```
 ## License
