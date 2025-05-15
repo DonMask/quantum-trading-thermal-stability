@@ -5,15 +5,15 @@ This project implements a Quantum Reinforcement Learning (QRL) model integrating
 ## Project Structure
 ```
 quantum-trading-thermal-stability/
-├── LICENSE                           # Creative Commons Attribution 4.0 License
-├── Quantum_Trading_Thermal_Stability.pdf  # Compiled vectorial PDF report
-├── README.md                        # Project documentation
-├── cmb_results.tex                  # CMB results table
-├── counts.dat                      # Data for QRL counts histogram
-├── main.tex                       # Main LaTeX source document
-├── p_error.dat                    # Data for fidelity vs. ΔT plot
-├── qrl_cmb_simulation.py          # Python simulation script
-└── references.bib                 # Bibliography in IEEE style
+├── LICENSE                                - Creative Commons Attribution 4.0 License
+├── Quantum_Trading_Thermal_Stability.pdf  - Compiled vectorial PDF report
+├── README.md                              - Project documentation
+├── cmb_results.tex                        - CMB results table
+├── counts.dat                             - Data for QRL counts histogram
+├── main.tex                               - Main LaTeX source document
+├── p_error.dat                            - Data for fidelity vs. ΔT plot
+├── qrl_cmb_simulation.py                  - Python simulation script
+└── references.bib                         - Bibliography in IEEE style
 ```
 ## Requirements
 
