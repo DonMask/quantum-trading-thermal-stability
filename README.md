@@ -65,7 +65,7 @@ quantum-trading-thermal-stability/
   doi          = {10.5281/zenodo.1234567}, % Replace with actual DOI
   url          = {https://doi.org/10.5281/zenodo.1234567} % Replace with actual DOI
 }
-
+'''
 ## License
 
 This project is licensed under the Creative Commons Attribution 4.0 International License. See the [LICENSE](LICENSE) file for details.
