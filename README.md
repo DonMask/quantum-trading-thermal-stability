@@ -16,13 +16,14 @@ quantum-trading-thermal-stability/
 └── references.bib                 # Bibliography in IEEE style
 
 ## Requirements
-
+'''
 - **Overleaf Account**: For compiling the LaTeX document.
 - **Python Environment** (to regenerate data files, optional):
   - Python 3.8+
   - Libraries: `astropy`, `qiskit`, `pandas`
   - Install: `pip install astropy qiskit pandas`
 - **CMB Data**: Download `COM_CMB_IQU-smica-field-Int_2048_R3.00.fits` from [Planck Legacy Archive](https://pla.esac.esa.int/pla/#maps) if regenerating data files.
+'''
 
 ## Setup and Compilation
 
